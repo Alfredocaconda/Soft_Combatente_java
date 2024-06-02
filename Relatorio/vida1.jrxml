@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vida1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9e1765ba-43a5-47d1-a644-345a5fc0cb32">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from consultar]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desmobilizado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datac" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="138" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="413" y="0" width="142" height="20" uuid="a692e9c9-6812-4fe0-af09-e72de93a9d70"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="225" y="70" width="141" height="20" uuid="aad9f23b-773a-4944-9dd7-eb3ae146682f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Republica De Angola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="192" y="90" width="212" height="20" uuid="6afdcb41-e1b1-49f7-93f2-7c8cc8537fb1"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ministerio dos Antigos Combatentes]]></text>
+			</staticText>
+			<image>
+				<reportElement x="259" y="20" width="50" height="50" uuid="663bff67-5e13-4f84-aa6e-9e4553f43a9c"/>
+				<imageExpression><![CDATA["C:\\Soft_Combatente\\Relatorio\\REPUBLICA.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="0" width="187" height="20" uuid="6dcd8ecf-4ec0-4da3-b370-cb69cbfddf7d"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMPROVATIVO DE PROVA DE VIDA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="426" y="0" width="125" height="20" uuid="d8f1bf1b-0acb-4a03-837e-401f2b6855d9"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="0" width="51" height="20" uuid="d5298567-f87d-47b0-9db4-a5a0d1cf3531"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="0" width="69" height="20" uuid="9e56f71a-e88e-4c90-b741-df1d0c9077fd"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGÓRIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="5" y="0" width="46" height="20" uuid="c0565bbf-8863-43d1-b5c3-0d0590bb55d5"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CÓDIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="46" y="0" width="123" height="20" uuid="99cbab39-f444-45e9-ac70-b82ffe1f4083"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="0" width="62" height="20" uuid="a5b103a9-3d3f-45b0-9f87-a4bcc545edd2"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="231" y="0" width="57" height="20" uuid="b3699639-3f3a-4379-8c8c-aab61ae06ec8"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="46" y="0" width="123" height="20" uuid="df414be2-7f2d-4d1d-a519-1916f3ea1534"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{desmobilizado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="0" width="54" height="20" uuid="03a5c47a-a4a0-4903-9164-bce95ce1b5ae"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="75" height="20" uuid="d393fdfd-f418-4d1a-bee4-aed7ab9ab357"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="0" width="69" height="20" uuid="bacc78a1-4071-4e32-aff6-0871a6d60a8c"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0KZ">
+				<reportElement x="367" y="0" width="59" height="20" uuid="600d50a7-a935-475e-b563-5560acc55d9e"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="0" width="69" height="20" uuid="15a20f98-9cde-4d1d-bc7e-88c31fbe8268"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="60" height="20" uuid="e5ce21d8-215d-4c33-bfbf-8a95864f8b59"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="5" y="0" width="29" height="20" uuid="3188bc82-d370-4a64-ae38-1ea5e9007c24"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="20" width="551" height="1" uuid="49c816d8-5f20-4cf0-80dc-c2057cbc92d0"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="35ef8a36-b87f-455f-b49c-4e366a820d33"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="5" splitType="Stretch"/>
+	</summary>
+</jasperReport>

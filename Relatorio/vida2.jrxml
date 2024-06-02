@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="vida2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fdc3232e-b3a9-490d-99eb-835cafa4412c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from consultar where codigo=$P{codigo}]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="desmobilizado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="data" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="datac" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="salario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="categoria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cidade" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="provincia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="60" width="141" height="20" uuid="9388cb70-8566-4abc-ac29-87e307575879"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Republica De Angola]]></text>
+			</staticText>
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="413" y="0" width="142" height="20" uuid="71eb603b-03dc-4cee-b69c-acdcdfa4b7c2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="247" y="10" width="50" height="50" uuid="648a0cb4-bb44-4b45-a35e-fa7fae535b8c"/>
+				<imageExpression><![CDATA["C:\\Soft_Combatente\\Relatorio\\REPUBLICA.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="178" y="80" width="212" height="20" uuid="07be79ea-c307-40d7-8d6d-5710f8e6d9fb"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ministerio dos Antigos Combatentes]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="187" height="20" uuid="39c460e2-8853-48d9-9ee6-980eb9d07ccb"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMPROVATIVO DE PROVA DE VIDA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="44" height="20" uuid="03a464d4-23e1-4e58-b9e9-07332557e4b0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="54" y="0" width="80" height="20" uuid="f06f9128-669c-4d91-9bc5-21537e171c8a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="0" width="51" height="20" uuid="7a3a6cad-bbaf-4e14-93d8-ee49268c7393"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="50" height="20" uuid="15701b2c-237c-4f25-bcf5-5df2933244ab"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="2" width="66" height="20" uuid="a59be079-9252-4438-b36c-784f4b238553"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NASCIMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="375" y="2" width="67" height="20" uuid="b7640ad6-7aa1-4725-bd6b-c2af154794f3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALÁRIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="303" y="2" width="72" height="20" uuid="6898db36-768f-4a43-806d-9f406a598255"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGÓRIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="2" width="113" height="20" uuid="862f0e48-cdfb-47ce-8e36-1c6a9d6d5349"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="44" height="20" uuid="7cc252e9-ac77-439f-b3a7-f5788b5b3ed9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="0" width="80" height="20" uuid="b573c37f-9af3-439b-8c36-6dfaf1363e08"/>
+				<textFieldExpression><![CDATA[$F{desmobilizado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="136" y="0" width="51" height="20" uuid="2a37c16c-0902-4c50-8898-2f6dff2174c4"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="0" width="49" height="20" uuid="d8a65d91-0f7f-4837-898e-766d1ec81ccd"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="237" y="0" width="66" height="20" uuid="629f5e78-cec5-4bfe-9091-e78c3c3aef85"/>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0KZ">
+				<reportElement x="375" y="0" width="67" height="20" uuid="c33d850c-7447-4902-9436-017980592349"/>
+				<textFieldExpression><![CDATA[$F{salario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="303" y="0" width="72" height="20" uuid="b1b2aefe-9840-4fdb-a235-dd19eae4c806"/>
+				<textFieldExpression><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="52" height="20" uuid="19f74d64-cffe-4b92-bfd2-34353420ecd3"/>
+				<textFieldExpression><![CDATA[$F{cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="61" height="20" uuid="3a88a8d3-a8fc-494a-b0bd-441fa77d3132"/>
+				<textFieldExpression><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="6" y="34" width="549" height="1" uuid="33fa976b-5172-4923-a71a-ad1d687a9c42"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="12" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="f26aed79-8d1c-41e9-9cdd-84a39a040e8a"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="15" splitType="Stretch"/>
+	</summary>
+</jasperReport>

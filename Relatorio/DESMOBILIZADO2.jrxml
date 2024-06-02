@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DESMOBILIZADO2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a5dd8a86-afe7-4cf1-90c7-4febb5e8df06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from decategoria where codigo=$P{codigo}]]>
+	</queryString>
+	<field name="CODIGO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NOME" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="GENERO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="BI" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NASCIMENTO" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CADASTRO" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CATEGORIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="SALARIO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MUNICIPIO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="PROVINCIA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="413" y="0" width="142" height="20" uuid="54962d89-70f2-4443-bcdf-484f58ac33b3"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="219" y="70" width="141" height="20" uuid="0b3a685a-efde-41ed-bd6d-2551efe3c394"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Republica De Angola]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="90" width="212" height="20" uuid="df004a1d-1d95-475d-905f-d8cf055ea6f2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ministerio dos Antigos Combatentes]]></text>
+			</staticText>
+			<image>
+				<reportElement x="253" y="20" width="50" height="50" uuid="2ac34c99-7484-42e0-bdb9-13a5deab8632"/>
+				<imageExpression><![CDATA["C:\\Soft_Combatente\\Relatorio\\REPUBLICA.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="39" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="187" height="20" uuid="cd7fe656-5670-4b5a-b016-2d4d3d1d1d91"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[COMPROVATIVO DE REGISTRO]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="56" height="20" uuid="7e164b83-4e17-4963-8492-af8e14f89e62"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="56" y="2" width="100" height="20" uuid="9da7afec-8e07-4ba3-8302-5e697d99caac"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="2" width="53" height="20" uuid="08fb6cb6-6840-478b-87e3-2babf5d92e85"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GENERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="209" y="2" width="66" height="20" uuid="68429224-2dff-4b67-9a22-dc00a35e2e2e"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nº BI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="2" width="72" height="20" uuid="6bb5e12c-0873-43e6-91f7-c06520f3a601"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGORIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="78" height="20" uuid="f759f62f-c096-4272-9d58-2d417fe27eaf"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ENDEREÇO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="2" width="65" height="20" uuid="6db98de9-2285-4cb7-88f0-007ade0bf429"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NASCIMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="412" y="2" width="65" height="20" uuid="dab84c6d-d9a0-418e-871f-82e0f7bf39e2"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALÁRIO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="56" height="20" uuid="44c2b801-c49c-4c27-acc0-5fe0c6315125"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="56" y="0" width="100" height="20" uuid="194d9efb-ceb0-491f-83a4-bbdcb5006d09"/>
+				<textFieldExpression><![CDATA[$F{NOME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="53" height="20" uuid="548a3a2c-2946-4f80-b1de-43880d1bb9ca"/>
+				<textFieldExpression><![CDATA[$F{GENERO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="0" width="54" height="20" uuid="0b391ac8-5232-43bf-b53d-85fb47d0219f"/>
+				<textFieldExpression><![CDATA[$F{BI}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="275" y="0" width="65" height="20" uuid="9f3d79ed-bf59-465b-be82-a95d980e1e6c"/>
+				<textFieldExpression><![CDATA[$F{NASCIMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="72" height="20" uuid="50c71c2e-40dc-4661-8ee2-9d6b4189d682"/>
+				<textFieldExpression><![CDATA[$F{CATEGORIA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0KZ">
+				<reportElement x="412" y="0" width="65" height="20" uuid="4dce504c-645f-49bb-8ffe-8b43f38a21d0"/>
+				<textFieldExpression><![CDATA[$F{SALARIO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="78" height="20" uuid="8cb4565e-1147-4f46-a163-3f847876c055"/>
+				<textFieldExpression><![CDATA[$F{PROVINCIA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="32" width="555" height="1" uuid="6f8dc6b6-ae95-4c73-baf1-4e2ac32bcc57"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="7d011b38-8677-44d3-b908-0d0a62d3f6d7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="7" splitType="Stretch"/>
+	</summary>
+</jasperReport>

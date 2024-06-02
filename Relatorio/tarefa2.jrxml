@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tarefa2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aa4c0091-5677-482a-9ff4-9334e822ece6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select *from mvtarefa where codigo=$P{id}]]>
+	</queryString>
+	<field name="CODIGO" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TAREFA" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="INICIO" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="TERMINO" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ESTADO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DESCRICAO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DEPARTAMENTO" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<textField pattern="EEE, d MMM yyyy HH:mm:ss Z">
+				<reportElement x="413" y="0" width="142" height="20" uuid="4e8721cb-1097-4f88-bbd0-875b92e74113"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="247" y="10" width="50" height="50" uuid="e4ccf846-28e9-4368-bde6-1f62e29d2c20"/>
+				<imageExpression><![CDATA["C:\\Soft_Combatente\\Relatorio\\REPUBLICA.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="178" y="80" width="212" height="20" uuid="dd8f4138-bfd9-4114-bf92-c234e1ce37c6"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ministerio dos Antigos Combatentes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="60" width="141" height="20" uuid="49a7c16d-d67d-4bc5-8400-2a0ea4355e8a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Republica De Angola]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="174" height="20" uuid="98c122a8-f15b-4e48-aeda-03f9f761f1f3"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[REGISTRO DAS TAREFAS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="49" height="20" uuid="fa4a57cb-4ebe-471e-bd84-9b9bad60bf44"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CODIGO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="2" width="112" height="20" uuid="955dfe70-7946-429c-b29e-dce5d061132c"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TAREFA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="161" y="2" width="63" height="20" uuid="57613cd2-1ddd-4c24-96bb-938d124367cf"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INÍCIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="2" width="68" height="20" uuid="90a25071-afc7-4910-9a32-2636f46e40ce"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TERMINO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="2" width="57" height="20" uuid="6e6680af-3464-495f-a549-febc53efbec8"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ESTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="2" width="88" height="20" uuid="40e8aac0-8976-4c0d-b660-ebe3161fe554"/>
+				<textElement>
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="2" width="113" height="20" uuid="13f71a08-673b-425c-a545-e4150cea5f32"/>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DESCRIÇÃO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="49" height="20" uuid="1aa89048-fc14-4959-98ea-69395ea47881"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{CODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="112" height="20" uuid="a632c7ee-d79b-4e66-9cb4-ad664eaf12cc"/>
+				<textFieldExpression><![CDATA[$F{TAREFA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="161" y="0" width="63" height="20" uuid="1ce2d0d6-8d01-4d5b-a1eb-57c3449f7dd0"/>
+				<textFieldExpression><![CDATA[$F{INICIO}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="233" y="0" width="64" height="20" uuid="a0f5057b-4146-4355-bff3-3ce71e90a052"/>
+				<textFieldExpression><![CDATA[$F{TERMINO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="0" width="57" height="20" uuid="a6e5de8d-e9f6-4fe4-83c4-01fbdfe8dc95"/>
+				<textFieldExpression><![CDATA[$F{ESTADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="88" height="20" uuid="5fa94758-2fbe-420c-adc6-e401a451b9b8"/>
+				<textFieldExpression><![CDATA[$F{DEPARTAMENTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="0" width="113" height="20" uuid="d223a620-8d7e-4cc4-9b90-8da8283736ce"/>
+				<textFieldExpression><![CDATA[$F{DESCRICAO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="28" width="555" height="1" uuid="21c87c41-c159-4887-ae83-bcf90a0ce15c"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="3c31ccd8-707a-47c7-909e-33ef8883b7f5"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="2" splitType="Stretch"/>
+	</summary>
+</jasperReport>
